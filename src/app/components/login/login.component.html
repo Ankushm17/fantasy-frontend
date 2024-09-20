@@ -1,0 +1,17 @@
+<div class="login-container">
+
+    <div class="login-left">
+        <div class="message" *ngIf="registerMessage">
+            <h1>{{ registerMessage }}</h1>
+        </div>
+        <h2>Login! 👋</h2>
+        <form class="form-signin login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" name="phone" placeholder="test@atheros.ai" formControlName="phone">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="******" formControlName="password">
+            <button type="submit" class="btn btn-signin">Sign In</button>
+        </form>
+        <p>Don't have an account? <a routerLink="/register">Sign Up Now</a></p>
+    </div>
+</div>

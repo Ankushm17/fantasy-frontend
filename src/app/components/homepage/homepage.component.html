@@ -1,0 +1,5 @@
+<div class="homepage">
+    <div *ngFor="let week of weekDetails$|async">
+        <app-match-day [weekDay]="week"></app-match-day>
+    </div>
+</div>

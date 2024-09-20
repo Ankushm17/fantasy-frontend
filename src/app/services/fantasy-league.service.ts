@@ -62,7 +62,7 @@ export class FantasyLeagueService {
       const endPoint = "api/users/";
       this.http.get<any>(this.base_url + endPoint + this.user.phone).subscribe(
         user => {
-          console.log(user);
+          // console.log(user);
           this.user = user;
           localStorage.setItem('user', JSON.stringify(this.user));
         }

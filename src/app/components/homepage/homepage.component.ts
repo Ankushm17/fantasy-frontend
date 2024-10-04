@@ -5,6 +5,7 @@ import { MatchDayComponent } from "../match-day/match-day.component";
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { FantasyLeagueService } from '../../services/fantasy-league.service';
 import { Router } from '@angular/router';
+import { MatchStatus } from '../../models/leaderboard-response.mode';
 // import { WeekDay } from '@angular/common';
 
 
@@ -30,6 +31,13 @@ export interface WeekDetails {
   team6: string,
   weekId: Number,
   weekName: string,
+  status: string,
+}
+
+export interface MatchDetailsResponse {
+  status: Number,
+  message: string,
+  matchesPerWeek: WeekDetails[],
 }
 
 
@@ -51,7 +59,6 @@ export class HomepageComponent implements OnInit {
 
   ngOnInit(): void {
     this.fantasyLeagueService.getWeekDetails().subscribe(weekDetails => {
-      // console.log(weekDetails);
       this.weekDetailsSubject.next(weekDetails);
     });
 
@@ -60,6 +67,8 @@ export class HomepageComponent implements OnInit {
         this.router.navigate(['/login']);
       }
     })
+
+    // this.fantasyLeagueService.getLeaderboardDetails("1");
 
     this.fantasyLeagueService.getUserDetails();
 

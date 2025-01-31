@@ -35,7 +35,7 @@ export class CreateNewTeamComponent implements OnInit {
   // playerDetailsSubject = new BehaviorSubject<PlayerDetail[]>([]);
   // playerDetails$: Observable<PlayerDetail[]> = this.fantasyLeagueService.getPlayerList();
   playerDetails!: PlayerDetail[];
-  teams: string[] = ["NB", "LE", "IJ", "DW", "HU", "PR"];
+  teams: string[] = ["EE", "RR", "AM", "DD", "CR", "FB"];
   creditsLeft: number = 120;
   showTeams = false;
 

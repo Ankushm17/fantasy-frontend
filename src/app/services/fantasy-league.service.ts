@@ -51,8 +51,8 @@ export class FantasyLeagueService {
   signupUrl = "api/users/register";
   createTeamUrl = "api/fantasy/create-team";
   base_url: string =
-    "https://infinity-fantasy-league.et.r.appspot.com/";
-  // "http://localhost:8080/";
+    //"https://infinity-fantasy-league.et.r.appspot.com/";
+  "http://localhost:8080/";
 
   authenticatedSubject = new BehaviorSubject<boolean>(false);
   authenticated$ = this.authenticatedSubject.asObservable();
@@ -241,17 +241,17 @@ export class FantasyLeagueService {
   getTeamIds(num: Number) {
     switch (num) {
       case 5819087:
-        return "NB";
+        return "EE";
       case 7349628:
-        return "LE";
+        return "RR";
       case 5804668:
-        return "IJ";
+        return "AM";
       case 7349687:
-        return "DW";
+        return "DD";
       case 5820628:
-        return "HU";
+        return "CR";
       case 7349618:
-        return "PR";
+        return "FB";
 
       default:
         return "num";
@@ -260,18 +260,18 @@ export class FantasyLeagueService {
 
   getTeamName(teamId: string) {
     switch (teamId) {
-      case "NB":
-        return "NewBies";
-      case "LE":
-        return "Legends";
-      case "IJ":
-        return "Juggernauts";
-      case "DW":
-        return "Warriors";
-      case "HU":
-        return "Hustlers";
-      case "PR":
-        return "Predators";
+      case "EE":
+        return "Elite Eagles";
+      case "RR":
+        return "Royal Rangers";
+      case "AM":
+        return "Animals";
+      case "DD":
+        return "Daredevils";
+      case "CR":
+        return "Crusaders";
+      case "FB":
+        return "Fury Bulls";
 
       default:
         return teamId;

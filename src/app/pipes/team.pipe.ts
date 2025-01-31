@@ -8,18 +8,18 @@ export class TeamPipe implements PipeTransform {
 
   transform(teamId: string): string {
     switch (teamId) {
-      case "NB":
-        return "NewBies";
-      case "LE":
-        return "Legends";
-      case "IJ":
-        return "Juggernauts";
-      case "DW":
-        return "Warriors";
-      case "HU":
-        return "Hustlers";
-      case "PR":
-        return "Predators";
+      case "EE":
+        return "Elite Eagles";
+      case "RR":
+        return "Royal Rangers";
+      case "AM":
+        return "Animals";
+      case "DD":
+        return "Daredevils";
+      case "CR":
+        return "Crusaders";
+      case "FB":
+        return "Fury Bulls";
 
       default:
         return teamId;
